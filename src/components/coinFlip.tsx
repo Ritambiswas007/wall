@@ -1,7 +1,17 @@
-import React, { useState, useEffect } from 'react';
-import { ethers, BigNumber, formatEther } from 'ethers';
+import  { useState, useEffect } from 'react';
+
+import React from 'react';
+
+import { BigNumberish } from 'ethers';
+
+
+
+
+
+import { ethers, formatEther } from 'ethers';
 import detectEthereumProvider from '@metamask/detect-provider';
-import './CoinFlip.css'; // Add your CSS styling here
+import './CoinFlip.css'; 
+
 import { PublicKey, Transaction, SystemProgram, Connection } from '@solana/web3.js';
 
 
@@ -16,7 +26,7 @@ const CoinFlip = () => {
     const [loading, setLoading] = useState<boolean>(false);
     const [balance, setBalance] = useState<number>(0);
     const [flipping, setFlipping] = useState<boolean>(false);
-    const [resultAmount, setResultAmount] = useState<number | null>(null); // State for result amount
+    const [resultAmount, setResultAmount] = useState<number | null>(null); 
 
     // Connecting to wallet
     const connectWallet = async () => {
